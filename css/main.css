@@ -9,7 +9,7 @@ html {
     }
     nav {
         /* Solid navbar */
-        background-color: #303030;
+        background-color: #FFFFFF;
     }
 }
 @media all and (min-width: 700px) {
@@ -19,19 +19,22 @@ html {
     }
     nav {
         /* Gradient navbar */
-        background-image: linear-gradient(90deg, #303030, #151515 95%);
+        background-image: linear-gradient(90deg, #FFFFFF, #F4F4F4 95%);
     }
 }
 body {
-    font-family: "Source Sans 3", sans-serif;   
-    background-color: #151515;
-    color: #f4f4f4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F4F4F4;
+    color: #212121;
+    text-align: center;
 }
 code {
     font-family: "Source Code Pro", monospace;
 }
 nav {
+    text-align: start;
     clear: both;
+    z-index: 5;
 }
 nav ul {
     margin: 0px 0px 15px 0px;
@@ -43,20 +46,36 @@ nav li {
     height: 48px;
 }
 nav li a {
-    color: #eeeeee;
+    color: #212121;
     text-decoration: none;
-    /* Color transition to darkseagreen */
+    /* Color transition to darkgreen */
     transition: color .2s ease-in;
 }
 nav li a.current, nav li a.current:hover {
-    color: lightseagreen;
+    color: green;
 }
-nav li a.disabled:hover {
-    color: #eeeeee;
+nav li a.disabled, nav li a.disabled:hover {
+    color: #646464;
 }
-nav li a:hover {
-    color: darkseagreen;
+a:hover {
+    color: darkgreen;
 }
 .main {
     margin-left: 10px;
+}
+#welcome-img {
+    /* 10em takes priority over 150px defined in HTML. */
+    height: 7.5em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+    border-radius: calc(7.5em * 23.6/355); /* element-height * (corner-radius/image-height) */
+}
+a {
+    color: #0066cc;
+    transition: color .2s ease-in;
+}
+hr {
+    border: 1px solid #AAA;
+}
+footer {
+    padding-top: 10vh;
 }
