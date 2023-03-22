@@ -1,0 +1,58 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  /* Layout */
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F4F4;
+  color: #212121;
+  /* Fonts */
+  font-family: Inter, "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  font-size: x-large;
+  text-align: center;
+} 
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter var", "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  }
+}
+code {
+  font-family: "SF Mono", "Source Code Pro", "Cascadia Mono", "Consolas", monospace;
+}
+
+/* Link colors */
+a {
+  color: #0066cc;
+  transition: color .2s ease-in;
+} a:hover {
+  color: darkgreen;
+}
+
+/* Special elements */
+#welcome-img {
+  /* NOTE: 7.5em takes priority over the 150px attribute defined in HTML. */
+  height: 7.5em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+  border-radius: calc(7.5em * 23.6/355); /* element-height * (corner-radius/image-height) */
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact-me {
+  padding: 5%;
+} #contact-me ul {
+  list-style: none;
+}
+footer {
+}
